@@ -7,10 +7,10 @@
 <body>
 
 <a-scene inspector="url: http://localhost:3333/dist/aframe-inspector.js">
-    <a-assets>
+   <!-- <a-assets>
         <audio id="blip1" src="assets/horned_owl.wav"></audio>
         <a-asset-item id="drone" src="assets/busterDrone.gltf">
-    </a-assets>
+    </a-assets>-->
     <a-sky color="#ECECEC"></a-sky>
     <a-entity position="54 1.5 12">
         <a-camera universal-controls>
@@ -18,39 +18,75 @@
                               radiusInner: 0.01; segmentsTheta: 32" material="color: #283644; shader: flat" position="0 0 -0.75"></a-entity>
         </a-camera>
     </a-entity>
+  <!--Covid-->
+  <!--NonCreated-->
    <!-- MOUSE-->
-   <a-obj-model src="assets/Mouse.obj" mtl="assets/Mouse.mtl" position="55 1.5 6"></a-obj-model>
+   <a-obj-model src="assets/Mouse.obj" mtl="assets/Mouse.mtl" position="55 1.3 -18" rotation="0 90 0"></a-obj-model>
    <!--BED-->
-   <a-obj-model src="assets/Bed.obj" mtl="assets/Bed.mtl" position="80 0 6"></a-obj-model>
+   <a-obj-model src="assets/Bed.obj" mtl="assets/Bed.mtl" position="45 -.5 -15"></a-obj-model>
    <!--COMPUTER-->
-   <a-obj-model src="assets/Computer.obj" mtl="assets/Computer.mtl" position="60 0 6" ></a-obj-model>
+   <a-obj-model src="assets/Computer.obj" mtl="assets/Computer.mtl" position="55 -.5 -18" rotation="0 -90 0" scale=".6 .6 .6"></a-obj-model>
    <!--Trash Can-->
-   <a-obj-model src="assets/Trash.obj" mtl="assets/Trash.mtl" position="60 0 12" ></a-obj-model>
+   <a-obj-model src="assets/Trash.obj" mtl="assets/Trash.mtl" position="49 -1.5 -19" scale=".5 .5 .5"></a-obj-model>
    <!--HeadSet
    <a-obj-model src="assets/Headset.obj" mtl="assets/Headset.mtl" position="60 0 16" ></a-obj-model>-->
    <!--Lamp-->
-   <a-obj-model src="assets/Lamp.obj" mtl="assets/Lamp.mtl" position="60 0 20" ></a-obj-model>
+   <a-obj-model src="assets/Lamp.obj" mtl="assets/Lamp.mtl" position="56 1.17 -19" scale=".5 .5 .5"></a-obj-model>
    <!--Window-->
-   <a-obj-model src="assets/Window.obj" mtl="assets/Window.mtl" position="60 0 24" ></a-obj-model>
+   <a-obj-model src="assets/Window.obj" mtl="assets/Window.mtl" position="39.7 0 -10" ></a-obj-model>
    <!--TV-->
-   <a-obj-model src="assets/TV.obj" mtl="assets/TV.mtl" position="60 0 28" ></a-obj-model>
+   <a-obj-model src="assets/TV.obj" mtl="assets/TV.mtl" position="45 .5 27.3" rotation="0 85 0"></a-obj-model>
    <!--Monitor-->
-   <a-obj-model src="assets/Monitor.obj" mtl="assets/Monitor.mtl" position="60 0 -6" ></a-obj-model>
+   <a-obj-model src="assets/Monitor.obj" mtl="assets/Monitor.mtl" position="53 1.3 -19" rotation="0 -90 0"></a-obj-model>
    <!--Chair-->
-   <a-obj-model src="assets/Chair.obj" mtl="assets/Chair.mtl" position="60 0 -6" ></a-obj-model>
+   <a-obj-model src="assets/Chair.obj" mtl="assets/Chair.mtl" position="56.75 -4 -15.5" rotation="0 180 0"></a-obj-model>
    <!--Desk-->
-   <a-obj-model src="assets/Desk.obj" mtl="assets/Desk.mtl" position="60 0 -6" ></a-obj-model>
+   <a-obj-model src="assets/Desk.obj" mtl="assets/Desk.mtl" position="50 0 -18.4" rotation="0 0 0" scale="3.5 3.5 3.5"></a-obj-model>
    <!--Created-->
    <!--Mug-->
-   <a-obj-model src="assets/CreatedMug.obj" mtl="assets/CreatedMug.mtl" position="45 0 -6" ></a-obj-model>
+   <a-obj-model src="assets/CreatedMug.obj" mtl="assets/CreatedMug.mtl" position="51 1.5 -18.75" scale=".20 .20 .20" rotation ="0 90 0"></a-obj-model>
    <!--Door-->
-   <a-obj-model src="assets/Door.obj" mtl="assets/Door.mtl" position="40 0 -6" ></a-obj-model>
+   <a-obj-model src="assets/Door.obj" mtl="assets/Door.mtl" position="57 0 7" scale="2 6 2"></a-obj-model>
+  <!--Door-->
+   <a-obj-model src="assets/Door.obj" mtl="assets/Door.mtl" position="55 0 1" scale="2 6 2" rotation ="0 180 0"></a-obj-model>
    <!--LightSwitch-->
    <a-obj-model src="assets/CreatedLightSwitch.obj" mtl="assets/CreatedLightSwitch.mtl" position="35 0 -6" ></a-obj-model>
    <!--Shelf-->
    <a-obj-model src="assets/CreatedShelf.obj" mtl="assets/CreatedShelf.mtl" position="30 0 -6" ></a-obj-model>
    <!--Stand-->
-   <a-obj-model src="assets/CreatedStand.obj" mtl="assets/CreatedStand.mtl" position="25 0 -6" ></a-obj-model>
+   <a-obj-model src="assets/CreatedStand.obj" mtl="assets/CreatedStand.mtl" position="45 -.40 27" scale="2 1 1"></a-obj-model>
+  
+  <!--NoCovid-->
+  <!--NonCreated-->
+   
+   <!--BED-->
+   <a-obj-model src="assets/Bed.obj" mtl="assets/Bed.mtl" position="76 -.5 -15"></a-obj-model>
+  
+   <!--Trash Can-->
+   <a-obj-model src="assets/Trash.obj" mtl="assets/Trash.mtl" position="63 -1.5 -19" scale=".5 .5 .5"></a-obj-model>
+  
+   <!--Lamp-->
+   <a-obj-model src="assets/Lamp.obj" mtl="assets/Lamp.mtl" position="64 1.17 -19" scale=".5 .5 .5" rotation= "0 180 0"></a-obj-model>
+   <!--Window-->
+   <a-obj-model src="assets/Window.obj" mtl="assets/Window.mtl" position="79.3 0 -10" rotation= "0 180 0"></a-obj-model>
+   <!--TV-->
+   <a-obj-model src="assets/TV.obj" mtl="assets/TV.mtl" position="75 .5 27.3" rotation="0 85 0"></a-obj-model>
+   
+   <!--Chair-->
+   <a-obj-model src="assets/Chair.obj" mtl="assets/Chair.mtl" position="71 -4 -15.5" rotation="0 180 0"></a-obj-model>
+   <!--Desk-->
+   <a-obj-model src="assets/Desk.obj" mtl="assets/Desk.mtl" position="70 0 -18.4" rotation= "0 180 0" scale="3.5 3.5 3.5"></a-obj-model>
+   <!--Created-->
+   <!--Mug-->
+   <a-obj-model src="assets/CreatedMug.obj" mtl="assets/CreatedMug.mtl" position="69 1.5 -18.75" scale=".20 .20 .20" rotation ="0 270 0"></a-obj-model>
+   <!--Door-->
+   <a-obj-model src="assets/Door.obj" mtl="assets/Door.mtl" position="80 0 -6" ></a-obj-model>
+   <!--LightSwitch-->
+   <a-obj-model src="assets/CreatedLightSwitch.obj" mtl="assets/CreatedLightSwitch.mtl" position="85 0 -6" ></a-obj-model>
+   <!--Shelf-->
+   <a-obj-model src="assets/CreatedShelf.obj" mtl="assets/CreatedShelf.mtl" position="80 0 -6" ></a-obj-model>
+   <!--Stand-->
+   <a-obj-model src="assets/CreatedStand.obj" mtl="assets/CreatedStand.mtl" position="75 -.40 27" scale="2 1 1"></a-obj-model>
    <!--
     <a-entity collada-model="url(assets/stormtrooper.dae)" rotation="90 0 0" position="60 0 6" ></a-entity>-->
 
@@ -89,9 +125,13 @@ roughness: 1; src: url(images/beam.jpg)"></a-entity>
     <!-- Walls  -->
     <a-entity static-body geometry="primitive: box; depth: 1; height: 14; width: 50" position="39 6.5 5" rotation="0 90 0" material="shader: standard;
 roughness: 1; src: url(images/WhiteWall.jpg); repeat: 4 2"></a-entity>
+  <a-entity static-body geometry="primitive: box; depth: 1; height: 14; width: 50" position="60 6.5 5" rotation="0 90 0" material="shader: standard;
+roughness: 1; src: url(images/WhiteWall.jpg); repeat: 4 2"></a-entity>
     <a-entity static-body geometry="primitive: box; depth: 1; height: 14; width: 50" position="80 6.5 5" rotation="0 90 0" material="shader: standard;
 roughness: 1; src: url(images/WhiteWall.jpg); repeat: 4 2"></a-entity>
     <a-entity static-body geometry="primitive: box; depth: 1; height: 14; width: 40" position="60 6.5 -20" rotation="0 0 0" material="shader: standard;
+roughness: 1; src: url(images/WhiteWall.jpg); repeat: 12 2"></a-entity>
+  <a-entity static-body geometry="primitive: box; depth: 1; height: 14; width: 40" position="60 6.5 5" rotation="0 0 0" material="shader: standard;
 roughness: 1; src: url(images/WhiteWall.jpg); repeat: 12 2"></a-entity>
     <a-entity static-body geometry="primitive: box; depth: 1; height: 14; width: 40" position="60 6.5 30" rotation="0 0 0" material="shader: standard;
 roughness: 1; src: url(images/WhiteWall.jpg); repeat: 12 2"></a-entity>
