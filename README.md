@@ -10,14 +10,49 @@ My project is simply a mirrored version of my apartments room between before cov
 
 ScreenShot
 
-Code
+```
+<!--User-->
+     <a-entity id="camera" camera="userHeight: 1.6" universal-controls cursor="rayOrigin: mouse" position = "73 1.5 -16"></a-entity>
+<!--ClickableObjects-->
+  <a-box position="45 1 -18" rotation="0 0 0" color="#000" shadow
+             onclick="MoveToNoCovid()"></a-box>
+	<a-box position="74 1 -18" rotation="0 0 0" color="#000" shadow
+             onclick="MoveToCovid()"></a-box>
+```
 
+```
+function MoveToCovid(){
+    document.getElementById('camera').setAttribute('position', '48 3 -16')
+     document.getElementById('light').setAttribute('visible', 'true');
+    document.getElementById('light2').setAttribute('visible', 'false');
+  }
+  function MoveToNoCovid(){
+    document.getElementById('camera').setAttribute('position', '73 3 -16')
+     document.getElementById('light').setAttribute('visible', 'false');
+    document.getElementById('light2').setAttribute('visible', 'true');
+  }
+```
 The last being that if the lights are off you can turn them on by clicking the light switch
 
 ScreenShot
+```
+<!--User-->
+     <a-entity id="camera" camera="userHeight: 1.6" universal-controls cursor="rayOrigin: mouse" position = "73 1.5 -16"></a-entity>
+<!--ClickableObjects-->
+<a-box position="60 3 -2" rotation="0 0 0" color="#000" scale = "1.1 .5 .5" shadow
+            onclick="TurnLights()"
+         ></a-box>
+```
 
-Code
-
+```
+function TurnLights() {
+   
+    document.getElementById('light').setAttribute('visible', 'true');
+    document.getElementById('light2').setAttribute('visible', 'false');
+    
+    
+    }
+```
 # Resources:
 Couch: https://www.cgtrader.com/items/190535/download-page
 
