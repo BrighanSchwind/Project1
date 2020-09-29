@@ -1,27 +1,34 @@
 <html>
 <head>
     <script src="libs/aframe.min.js"></script>
-
+    
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v1.14.0/dist/aframe-extras.min.js"></script>
 </head>
 <body>
 
-<a-scene inspector="url: http://localhost:3333/dist/aframe-inspector.js">
+<a-scene inspector="url: http://localhost:3333/dist/aframe-inspector.js" light="defaultLightsEnabled: false">
    <!-- <a-assets>
         <audio id="blip1" src="assets/horned_owl.wav"></audio>
         <a-asset-item id="drone" src="assets/busterDrone.gltf">
     </a-assets>-->
-    <a-sky color="#ECECEC"></a-sky>
-    <a-entity position="54 1.5 12">
-        <a-camera universal-controls>
-            <a-entity raycaster="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015;
-                              radiusInner: 0.01; segmentsTheta: 32" material="color: #283644; shader: flat" position="0 0 -0.75"></a-entity>
-        </a-camera>
-    </a-entity>
+    <a-entity light="type: ambient; color: #BBB"></a-entity>
+    <a-entity id = "light" light="type: directional; color: #FFF; intensity: 0.6" position="-0.5 1 1" visible="false"></a-entity>
+    <a-entity id = "light2" light="type: directional; color: #000; intensity: 0.6" position="-0.5 1 1"></a-entity>
+    <a-sky id = "sky" color="#ECECEC"></a-sky>
+     <a-entity id="camera" camera="userHeight: 1.6" universal-controls cursor="rayOrigin: mouse" position = "73 1.5 -16"></a-entity>
+
+      <a-box position="45 1 -18" rotation="0 0 0" color="#000" shadow
+             onclick="MoveToNoCovid()"></a-box>
+  <a-box position="74 1 -18" rotation="0 0 0" color="#000" shadow
+             onclick="MoveToCovid()"></a-box>
+   <a-box position="60.25 3 -2" rotation="0 0 0" color="#000" scale = ".5 .5 .5" shadow
+            onclick="TurnLights()"
+         ></a-box>
   <!--Covid -->
   <!--NonCreated-->
    <!-- MOUSE-->
-   <a-obj-model src="assets/Mouse.obj" mtl="assets/Mouse.mtl" position="55 1.3 -18" rotation="0 90 0"></a-obj-model>
+   <a-obj-model src="assets/Mouse.obj" mtl="assets/Mouse.mtl" position="55 1.3 -18" rotation="0 90 0"  
+                 ></a-obj-model>
    <!--BED-->
    <a-obj-model src="assets/Bed.obj" mtl="assets/Bed.mtl" position="45 -.5 -15"></a-obj-model>
    <!--COMPUTER-->
@@ -54,7 +61,7 @@
   <!--Door-->
    <a-obj-model src="assets/Door.obj" mtl="assets/Door.mtl" position="55 0 3" scale="2 6 2" rotation ="0 180 0"></a-obj-model>
    <!--LightSwitch-->
-   <a-obj-model src="assets/CreatedLightSwitch.obj" mtl="assets/CreatedLightSwitch.mtl" position="59.25 3 -2" scale=".25 .25 .25" rotation="0 180 0"></a-obj-model>
+   <a-obj-model src="assets/CreatedLightSwitch.obj" mtl="assets/CreatedLightSwitch.mtl" position="59.25 3 -2" scale=".25 .25 .25" rotation="0 180 0" ></a-obj-model>
    <!--Shelf-->
    <a-obj-model src="assets/CreatedShelf.obj" mtl="assets/CreatedShelf.mtl" position="39.5 4 -4" rotation="0 90 0" scale="2 1 1"></a-obj-model>
    <!--Stand-->
@@ -81,7 +88,7 @@
    <!--Desk-->
    <a-obj-model src="assets/Desk.obj" mtl="assets/Desk.mtl" position="70 0 -18.4" rotation= "0 180 0" scale="3.5 3.5 3.5"></a-obj-model>
     <!--Sofa-->
-   <a-obj-model src="assets/Sofa.obj" mtl="assets/Sofa.mtl" position="75 -5.25 15" rotation="0 270 0" scale="1.5 1.5 1.5"></a-obj-model>
+   <a-obj-model src="assets/Sofa2.obj" mtl="assets/Sofa2.mtl" position="75 -.5 16" rotation="0 0 0" scale="1.5 1.5 1.5"></a-obj-model>
   <!--Created-->
    <!--Mug-->
    <a-obj-model src="assets/CreatedMug.obj" mtl="assets/CreatedMug.mtl" position="69 1.5 -18.75" scale=".20 .20 .20" rotation ="0 270 0"></a-obj-model>
@@ -146,89 +153,31 @@ roughness: 1; src: url(images/WhiteWall.jpg); repeat: 12 2"></a-entity>
 
     
 	
-    <!-- Torch -->
-	<!--
-    <a-entity geometry="primitive: cylinder; radius: 0.3; height: 5" position="35 4 5" rotation="-40 -90 0" material="
-src: url(images/torch2.jpg)"></a-entity>
-    <a-entity geometry="primitive: sphere; radius: 0.6" position="36.6 6.2 5" rotation="0 0 0" material="
-color:#222">
-        <a-entity geometry="primitive: cylinder; radius: 0.6; height: 0.5" position="0 0.3 0" rotation="0 0 0" material="
-color:#222"></a-entity>
-        <a-entity geometry="primitive: plane; height: 1; width: 1" position="0 0.9 0" rotation="0 0 0" material="shader: flat; side: double; transparent: true;
-src: url(images/fire.png)">
-            <a-animation attribute="position" to="0 0.95 0" easing="linear" repeat="indefinite" dur="450"></a-animation>
-        </a-entity>
-        <a-entity geometry="primitive: plane; height: 1; width: 1" position="0 0.9 0" rotation="0 90 0" material="shader: flat; side: double; transparent: true;
-src: url(images/fire.png)">
-            <a-animation attribute="position" to="0 0.95 0" easing="linear" repeat="indefinite" dur="500"></a-animation>
-        </a-entity>
-    </a-entity>
-
    
-    <!-- Chair -
-    <a-entity geometry="primitive: box; depth: 2; height: 0.3; width: 2" position="54 0.5 8" rotation="0 100 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)">
-        <a-entity geometry="primitive: box; depth: 0.3; height: 1.2; width: 0.3" position="0.8 -0.5 0.8" rotation="0 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)"></a-entity>
-        <a-entity geometry="primitive: box; depth: 0.3; height: 1.2; width: 0.3" position="-0.8 -0.5 0.8" rotation="0 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)"></a-entity>
-        <a-entity geometry="primitive: box; depth: 0.3; height: 1.2; width: 0.3" position="0.8 -0.5 -0.8" rotation="0 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)"></a-entity>
-        <a-entity geometry="primitive: box; depth: 0.3; height: 1.2; width: 0.3" position="-0.8 -0.5 -0.8" rotation="0 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)"></a-entity>
-        <a-entity geometry="primitive: box; depth: 1; height: 0.3; width: 2" position="-1 1 0" rotation="80 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)"></a-entity>
-        <a-entity geometry="primitive: box; depth: 0.2; height: 1.1; width: 0.3" position="-0.9 0.5 0.8" rotation="-10 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)"></a-entity>
-        <a-entity geometry="primitive: box; depth: 0.2; height: 1.1; width: 0.3" position="-0.9 0.5 -0.8" rotation="-10 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)"></a-entity>
-    </a-entity>
-    <!-- Chair 
-    <a-entity geometry="primitive: box; depth: 2; height: 0.3; wDDDDDDDDDDidth: 2" position="55.5 0.5 2" rotation="0 250 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)">
-        <a-entity geometry="primitive: box; depth: 0.3; height: 1.2; width: 0.3" position="0.8 -0.5 0.8" rotation="0 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)"></a-entity>
-        <a-entity geometry="primitive: box; depth: 0.3; height: 1.2; width: 0.3" position="-0.8 -0.5 0.8" rotation="0 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)"></a-entity>
-        <a-entity geometry="primitive: box; depth: 0.3; height: 1.2; width: 0.3" position="0.8 -0.5 -0.8" rotation="0 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)"></a-entity>
-        <a-entity geometry="primitive: box; depth: 0.3; height: 1.2; width: 0.3" position="-0.8 -0.5 -0.8" rotation="0 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)"></a-entity>
-        <a-entity geometry="primitive: box; depth: 1; height: 0.3; width: 2" position="-1 1 0" rotation="80 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)"></a-entity>
-        <a-entity geometry="primitive: box; depth: 0.2; height: 1.1; width: 0.3" position="-0.9 0.5 0.8" rotation="-10 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)"></a-entity>
-        <a-entity geometry="primitive: box; depth: 0.2; height: 1.1; width: 0.3" position="-0.9 0.5 -0.8" rotation="-10 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)"></a-entity>
-    </a-entity>-->
-
-    <!-- Table 
-    <a-entity static-body geometry="primitive: box; depth: 8; height: 0.3; width: 3" position="54 1.2 16" rotation="0 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)">
-        <a-entity static-body geometry="primitive: box; depth: 0.3; height: 2.2; width: 0.3" position="-1.2 -1 20" rotation="0 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)"></a-entity>
-        <a-entity static-body geometry="primitive: box; depth: 0.3; height: 2.2; width: 0.3" position="1.2 -1 20" rotation="0 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)"></a-entity>
-        <a-entity static-body geometry="primitive: box; depth: 0.3; height: 2.2; width: 0.3" position="1.2 -1 12" rotation="0 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)"></a-entity>
-        <a-entity static-body geometry="primitive: box; depth: 0.3; height: 2.2; width: 0.3" position="-1.2 -1 12" rotation="0 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)"></a-entity>
--->
-     
-
-    <!-- Table -->
-   <!-- <a-entity static-body geometry="primitive: box; depth: 8; height: 0.3; width: 3" position="-54 1.2 5" rotation="0 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)">
-        <a-entity static-body geometry="primitive: box; depth: 0.3; height: 2.2; width: 0.3" position="-1.2 -1 3.8" rotation="0 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)"></a-entity>
-        <a-entity static-body geometry="primitive: box; depth: 0.3; height: 2.2; width: 0.3" position="1.2 -1 3.8" rotation="0 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)"></a-entity>
-        <a-entity static-body geometry="primitive: box; depth: 0.3; height: 2.2; width: 0.3" position="1.2 -1 -3.8" rotation="0 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)"></a-entity>
-        <a-entity static-body geometry="primitive: box; depth: 0.3; height: 2.2; width: 0.3" position="-1.2 -1 -3.8" rotation="0 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg)"></a-entity>
--->
 </a-scene>
+<script type="text/javascript">
 
+  // example via https://github.com/aframevr/aframe/issues/1023
+
+  
+  function TurnLights() {
+   
+    document.getElementById('light').setAttribute('visible', 'true');
+    document.getElementById('light2').setAttribute('visible', 'false');
+    
+    
+    }
+  function MoveToCovid(){
+    document.getElementById('camera').setAttribute('position', '48 3 -16')
+     document.getElementById('light').setAttribute('visible', 'true');
+    document.getElementById('light2').setAttribute('visible', 'false');
+  }
+  function MoveToNoCovid(){
+    document.getElementById('camera').setAttribute('position', '73 3 -16')
+     document.getElementById('light').setAttribute('visible', 'false');
+    document.getElementById('light2').setAttribute('visible', 'true');
+  }
+  </script>
 </body>
 </html>
+
