@@ -7,23 +7,23 @@
 <body>
 
 <a-scene inspector="url: http://localhost:3333/dist/aframe-inspector.js" light="defaultLightsEnabled: false">
-   <!-- <a-assets>
-        <audio id="blip1" src="assets/horned_owl.wav"></audio>
-        <a-asset-item id="drone" src="assets/busterDrone.gltf">
-    </a-assets>-->
+   
+	<!--Lighting-->
     <a-entity light="type: ambient; color: #BBB"></a-entity>
     <a-entity id = "light" light="type: directional; color: #FFF; intensity: 0.6" position="-0.5 1 1" visible="false"></a-entity>
     <a-entity id = "light2" light="type: directional; color: #000; intensity: 0.6" position="-0.5 1 1"></a-entity>
     <a-sky id = "sky" color="#ECECEC"></a-sky>
+	<!--User-->
      <a-entity id="camera" camera="userHeight: 1.6" universal-controls cursor="rayOrigin: mouse" position = "73 1.5 -16"></a-entity>
-
-      <a-box position="45 1 -18" rotation="0 0 0" color="#000" shadow
+	<!--ClickableObjects-->
+    <a-box position="45 1 -18" rotation="0 0 0" color="#000" shadow
              onclick="MoveToNoCovid()"></a-box>
-  <a-box position="74 1 -18" rotation="0 0 0" color="#000" shadow
+	<a-box position="74 1 -18" rotation="0 0 0" color="#000" shadow
              onclick="MoveToCovid()"></a-box>
-   <a-box position="60 3 -2" rotation="0 0 0" color="#000" scale = "1.1 .5 .5" shadow
+	<a-box position="60 3 -2" rotation="0 0 0" color="#000" scale = "1.1 .5 .5" shadow
             onclick="TurnLights()"
          ></a-box>
+		 
   <!--Covid -->
   <!--NonCreated-->
    <!-- MOUSE-->
@@ -50,16 +50,17 @@
    <a-obj-model src="assets/Desk.obj" mtl="assets/Desk.mtl" position="50 0 -18.4" rotation="0 0 0" scale="3.5 3.5 3.5"></a-obj-model>
     <!--Sofa-->
    <a-obj-model src="assets/Sofa.obj" mtl="assets/Sofa.mtl" position="40 -5.25 15" rotation="0 0 0" scale="1.5 1.5 1.5"></a-obj-model>
-   
+   <!--Drawer-->
    <a-obj-model src="assets/Drawer.obj" mtl="assets/Drawer.mtl" position="60 0 -18" rotation="0 180 0" scale=".02 .02 .02"></a-obj-model>
-  <a-obj-model src="assets/Keyboard.obj" mtl="assets/Keyboard.mtl" position="53 1.25 -18" rotation="0 90 0" scale=".00025 .00025 .00025"></a-obj-model>
+   <!--Keyboard-->
+   <a-obj-model src="assets/Keyboard.obj" mtl="assets/Keyboard.mtl" position="53 1.25 -18" rotation="0 90 0" scale=".00025 .00025 .00025"></a-obj-model>
  
    <!--Created-->
    <!--Mug-->
    <a-obj-model src="assets/CreatedMug.obj" mtl="assets/CreatedMug.mtl" position="51 1.5 -18.75" scale=".20 .20 .20" rotation ="0 90 0"></a-obj-model>
    <!--Door-->
    <a-obj-model src="assets/Door.obj" mtl="assets/Door.mtl" position="57 0 7" scale="2 6 2"></a-obj-model>
-  <!--Door-->
+   <!--Door-->
    <a-obj-model src="assets/Door.obj" mtl="assets/Door.mtl" position="55 0 3" scale="2 6 2" rotation ="0 180 0"></a-obj-model>
    <!--LightSwitch-->
    <a-obj-model src="assets/CreatedLightSwitch.obj" mtl="assets/CreatedLightSwitch.mtl" position="59.25 3 -2" scale=".25 .25 .25" rotation="0 180 0" ></a-obj-model>
@@ -70,6 +71,7 @@
   
   <!--NoCovid-->
   <!--NonCreated-->
+  <!--Book-->
   <a-obj-model src="assets/Book.obj" mtl="assets/Book.mtl" position="68 1.35 -18.4" rotation="0 0 0" scale=".02 .02 .02"></a-obj-model>
    <!--BED-->
    <a-obj-model src="assets/Bed.obj" mtl="assets/Bed.mtl" position="76 -.5 -15"></a-obj-model>
