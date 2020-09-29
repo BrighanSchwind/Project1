@@ -3,12 +3,17 @@
 My project is simply a mirrored version of my apartments room between before covid and after covid.
 
 ## BEFORE
+
+![Before Covid](https://github.com/BrighanSchwind/Project1/blob/master/Project1ScreenShots/BeforeCovid.JPG)
+
 ## AFTER
+
+![After Covid](https://github.com/BrighanSchwind/Project1/blob/master/Project1ScreenShots/AfterCovid.JPG)
 
 ### There are 3 things that the user can do within my project.
 2 of them are if you click the pillow farthest from the wall it will move you into the mirrored room with the lighting being toggled.
 
-ScreenShot
+![Bed](https://github.com/BrighanSchwind/Project1/blob/master/Project1ScreenShots/Bed.JPG)
 
 ```
 <!--User-->
@@ -34,7 +39,8 @@ function MoveToCovid(){
 ```
 The last being that if the lights are off you can turn them on by clicking the light switch
 
-ScreenShot
+![LightSwitch](https://github.com/BrighanSchwind/Project1/blob/master/Project1ScreenShots/LightSwitch.JPG)
+
 ```
 <!--User-->
      <a-entity id="camera" camera="userHeight: 1.6" universal-controls cursor="rayOrigin: mouse" position = "73 1.5 -16"></a-entity>
