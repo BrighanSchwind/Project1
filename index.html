@@ -28,6 +28,15 @@
   <!--NonCreated-->
    <!-- MOUSE-->
    <a-obj-model src="assets/Mouse.obj" mtl="assets/Mouse.mtl" position="55 1.3 -18" rotation="0 90 0"  ></a-obj-model>
+  <!-- Fan-->
+   <a-obj-model src="assets/fan.obj" mtl="assets/fan.mtl" position="50 9.5 -10" rotation="0 0 0"  scale = ".05 .05 .05">
+   <a-animation attribute="rotation"
+                     easing="linear"
+                     dur="10000"
+                     to="0 360 0"
+                     repeat="indefinite">
+
+        </a-animation></a-obj-model>
    <!--BED-->
    <a-obj-model src="assets/Bed.obj" mtl="assets/Bed.mtl" position="45 -.5 -15"></a-obj-model>
    <!--COMPUTER-->
@@ -78,7 +87,15 @@
   
    <!--Trash Can-->
    <a-obj-model src="assets/Trash.obj" mtl="assets/Trash.mtl" position="63 -1.5 -19" scale=".5 .5 .5"></a-obj-model>
-  
+  <!-- Fan-->
+   <a-obj-model src="assets/fan.obj" mtl="assets/fan.mtl" position="70 9.5 -10" rotation="0 0 0"  scale = ".05 .05 .05">
+   <a-animation attribute="rotation"
+                     easing="linear"
+                     dur="10000"
+                     to="0 360 0"
+                     repeat="indefinite">
+
+        </a-animation></a-obj-model>
    <!--Lamp-->
    <a-obj-model src="assets/Lamp.obj" mtl="assets/Lamp.mtl" position="64 1.17 -19" scale=".5 .5 .5" rotation= "0 180 0"></a-obj-model>
    <!--Window-->
@@ -191,4 +208,5 @@ roughness: 1; src: url(images/Night.jpeg); repeat: 1 1"></a-entity>
   </script>
 </body>
 </html>
+
 
