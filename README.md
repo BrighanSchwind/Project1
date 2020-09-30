@@ -61,6 +61,7 @@ function TurnLights() {
 ```
 # Finaly the ceiling fan moves
 
+![fan](https://github.com/BrighanSchwind/Project1/blob/master/Project1ScreenShots/CeilingFan.JPG)
 
 ```
 <!-- Fan-->
