@@ -14,7 +14,10 @@
     <a-entity id = "light2" light="type: directional; color: #000; intensity: 0.6" position="-0.5 1 1"></a-entity>
     <a-sky id = "sky" color="#ECECEC"></a-sky>
 	<!--User-->
-     <a-entity id="camera" camera="userHeight: 1.6" universal-controls cursor="rayOrigin: mouse" position = "73 1.5 -16"></a-entity>
+     <a-entity id="camera" camera="userHeight: 1.6" universal-controls cursor="rayOrigin: mouse" position = "73 1.5 -16">
+	 <a-entity text="value: Click Farthest pillow to teleport                                             Click Light Switch to turn lights on; color: red; width: 2;" position="-3 2 -3" >
+  </a-entity>
+  </a-entity>
 	<!--ClickableObjects-->
     <a-box position="45 1 -18" rotation="0 0 0" color="#000" shadow
              onclick="MoveToNoCovid()"></a-box>
